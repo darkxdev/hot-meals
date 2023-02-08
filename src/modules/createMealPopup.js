@@ -7,8 +7,10 @@ import displayComments from './displayComments.js';
 
 const createMealPopup = async (meal) => {
   // Create the popup container
+  const popupwrapper = document.createElement('section');
   const popup = document.createElement('div');
   popup.id = 'meal-popup';
+  popupwrapper.classList.add('pop-up-wrapper');
 
   // Create the close button
   const closeButton = document.createElement('div');
@@ -16,7 +18,7 @@ const createMealPopup = async (meal) => {
   closeButton.innerHTML = '<i class="fa-solid fa-circle-xmark fa-2x"></i>';
   closeButton.addEventListener('click', () => {
     // Remove the popup when the close button is clicked
-    popup.remove();
+    popupwrapper.remove();
   });
   popup.appendChild(closeButton);
 
@@ -71,7 +73,8 @@ const createMealPopup = async (meal) => {
   popup.appendChild(commentsSection);
 
   // Add the popup to the body
-  document.body.appendChild(popup);
+  popupwrapper.appendChild(popup);
+  document.body.appendChild(popupwrapper);
 };
 
 export default createMealPopup;
