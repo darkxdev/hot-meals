@@ -6,16 +6,6 @@ const logoImg = document.querySelector('#logo');
 
 logoImg.src = logo;
 
-window.addEventListener('load', async () => {
-  let appId;
-  if (!localStorage.getItem('app')) {
-  appId = createApp();
-  localStorage.setItem('app', appId);
-  } else {
-  appId = localStorage.getItem('app');
-  }
-  });
-
 /**
  * Fetch meal data by name from the API and displays it in a meal popup.
  */
