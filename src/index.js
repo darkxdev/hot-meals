@@ -1,7 +1,7 @@
 /**
  * Import necessary modules.
  */
-
+import createApp from './modules/createApp.js';
 import getMealByName from './modules/getMeal.js';
 import createMealPopup from './modules/createMealPopup.js';
 import logo from './img/hot-meals.png';
@@ -9,6 +9,16 @@ import logo from './img/hot-meals.png';
 const logoImg = document.querySelector('#logo');
 
 logoImg.src = logo;
+
+window.addEventListener('load', async () => {
+  let appId;
+  if (!localStorage.getItem('app')) {
+  appId = createApp();
+  localStorage.setItem('app', appId);
+  } else {
+  appId = localStorage.getItem('app');
+  }
+  });
 
 /**
  * Fetch meal data by name from the API and displays it in a meal popup.

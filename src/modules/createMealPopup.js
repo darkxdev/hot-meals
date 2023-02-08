@@ -1,8 +1,11 @@
+import createApp from "./createApp.js";
+import getComments from "./getComments.js";
+
 /**
  * Create a meal popup with meal information.
  */
 
-const createMealPopup = (meal) => {
+const createMealPopup = async (meal) => {
   // Create the popup container
   const popup = document.createElement('div');
   popup.id = 'meal-popup';
@@ -57,6 +60,14 @@ const createMealPopup = (meal) => {
   videoLink.href = meal.strYoutube;
   videoLink.target = '_blank';
   video.appendChild(videoLink);
+
+  // Create the comments section
+
+  const appId = createApp();
+  const itemId = meal.idMeal;
+  const comments = await getComments(appId, itemId);
+
+  displayComments(comments);
 
   // Add the popup to the body
   document.body.appendChild(popup);
