@@ -103,12 +103,12 @@
 }
 
 .btn:hover {
-  color: #ffffff;
+  color: #fff;
   background-color: #6274fd;
 }
 
 .btn:focus {
-  color: #ffffff;
+  color: #fff;
   background-color: #6274fd;
 }
 
