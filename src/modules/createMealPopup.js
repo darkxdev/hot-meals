@@ -1,5 +1,5 @@
-import createApp from "./createApp.js";
 import getComments from "./getComments.js";
+import displayComments from "./displayComments.js"
 
 /**
  * Create a meal popup with meal information.
@@ -63,11 +63,12 @@ const createMealPopup = async (meal) => {
 
   // Create the comments section
 
-  const appId = createApp();
+  const appId = 'aCs2HQyrY5rfYgOrwEv8';
   const itemId = meal.idMeal;
-  const comments = await getComments(appId, itemId);
+  const comments = await getComments(appId, '52771');
 
-  displayComments(comments);
+  const commentsSection = displayComments(comments);
+  popup.appendChild(commentsSection);
 
   // Add the popup to the body
   document.body.appendChild(popup);

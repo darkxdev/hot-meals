@@ -1,7 +1,3 @@
-/**
- * Import necessary modules.
- */
-import createApp from './modules/createApp.js';
 import getMealByName from './modules/getMeal.js';
 import createMealPopup from './modules/createMealPopup.js';
 import logo from './img/hot-meals.png';
