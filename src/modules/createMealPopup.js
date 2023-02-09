@@ -2,12 +2,13 @@ import getComments from './getComments.js';
 import displayComments from './displayComments.js';
 import createCommentForm from './createCommentForm.js';
 import submitComment from './submitComment.js';
+import commentsCounter from './commentsCounter.js';
 
 /**
  * Create a meal popup with meal information.
  */
 
-const createMealPopup = async (meal) => {
+const createMealPopup = async (meal, idMeal) => {
   // Create the popup container
   const popupwrapper = document.createElement('section');
   const popup = document.createElement('div');
@@ -68,10 +69,10 @@ const createMealPopup = async (meal) => {
   // Create the comments section
 
   const appId = 'T2kz2KuAi806f4P5EDsm';
-  // const itemId = meal.idMeal;
-  const comments = await getComments(appId, '52771');
-
+  const comments = await getComments(appId, idMeal);
   const commentsSection = displayComments(comments);
+  
+
   popup.appendChild(commentsSection);
 
   // Create comment form
@@ -83,7 +84,7 @@ const createMealPopup = async (meal) => {
     event.preventDefault();
     const nameInput = commentForm.querySelector('input');
     const messageTextArea = commentForm.querySelector('textarea');
-    submitComment(appId, '52771', nameInput.value, messageTextArea.value);
+    submitComment(appId, idMeal, nameInput.value, messageTextArea.value);
   });
 
   popup.appendChild(commentForm);

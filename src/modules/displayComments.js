@@ -12,7 +12,6 @@ const displayComments = (comments) => {
     list.appendChild(listItem);
   });
   commentsSection.appendChild(list);
-  // popup.appendChild(commentsSection);
 
   return commentsSection;
 };
