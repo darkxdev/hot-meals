@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { JSDOM } from 'jsdom';
 import commentsCounter from '../src/modules/commentsCounter.js';
 
