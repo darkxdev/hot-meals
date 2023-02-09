@@ -1,9 +1,9 @@
+import commentsCounter from '../src/modules/commentsCounter.js';
+
 const { JSDOM } = require('jsdom');
 
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello World</p>`);
+const dom = new JSDOM('<!DOCTYPE html><p>Hello World</p>');
 global.document = dom.window.document;
-
-import commentsCounter from "../src/modules/commentsCounter.js";
 
 describe('Is the number of comments correct', () => {
   test('Comments length should be', () => {
