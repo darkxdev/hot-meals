@@ -44,7 +44,6 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "jsdo": "^4.3.12",
     "webpack-dev-server": "^4.11.1"
   }
 }
