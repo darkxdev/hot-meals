@@ -1,7 +1,6 @@
-const commentsCounter = () => {
-  const commentsSection = displayComments();
-  const comments = commentsSection.querySelectorAll('li');
-  return comments.length;
+const commentsCounter = (commentsSection) => {
+  const commentsItems = commentsSection.querySelectorAll('li');
+  return commentsItems.length;
 }
 
 export default commentsCounter;

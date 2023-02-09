@@ -39,7 +39,7 @@ const renderMeals = (data = [], likes = []) => {
   btnComments.forEach((btn, index) => {
     btn.addEventListener('click', () => {
       getMealByName(data[index].strMeal).then((meal) => {
-        createMealPopup(meal, 52771);
+        createMealPopup(meal, meal.idMeal);
       });
     });
   });
