@@ -1,7 +1,7 @@
 const displayComments = (comments) => {
   const commentsSection = document.createElement('div');
   commentsSection.id = 'comments-section';
-  const header = document.createElement('h2');
+  const header = document.createElement('h3');
   header.textContent = 'Comments';
   commentsSection.appendChild(header);
 
