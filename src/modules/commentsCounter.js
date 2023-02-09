@@ -1,5 +1,5 @@
 const commentsCounter = (commentsSection) => {
-  const commentsItems = commentsSection.querySelectorAll('li');
+  const commentsItems = Array.from(commentsSection);
   return commentsItems.length;
 }
 
