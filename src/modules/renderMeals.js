@@ -1,11 +1,16 @@
 import getMealByName from './getMeal.js';
 import createMealPopup from './createMealPopup.js';
 import { postLike } from './likes.js';
+import countItems from './countItems.js';
 
 const renderMeals = (data = [], likes = []) => {
   const main = document.querySelector('main');
+  const mealsLink = document.querySelector('.nav li a');
   const section = document.createElement('section');
   section.classList.add('main-section');
+
+  const itemCount = countItems(data);
+  mealsLink.textContent += `(${itemCount})`;
 
   const mapped = data.map((meal) => {
     const like = likes.find((like) => like.item_id === meal.idMeal);
