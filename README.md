@@ -48,7 +48,7 @@
 
 You can checkout the live running version of this app at the following link:
 
-[https://darkxdev.github.io/Leaderboard-App/src](https://darkxdev.github.io/JavaScript-Capstone-Project/dist)
+[https://darkxdev.github.io/JavaScript-Capstone-Project/dist](https://darkxdev.github.io/JavaScript-Capstone-Project/dist)
 
 <!-- GETTING STARTED -->
 
