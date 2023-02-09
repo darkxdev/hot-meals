@@ -51,7 +51,7 @@ const createMealPopup = async (meal) => {
 
   // Create the tags item
   const tags = document.createElement('li');
-  tags.innerText = `Tags: ${meal.strTags}`;
+  tags.innerText = `ID: ${meal.idMeal}`;
   infoContainer.appendChild(tags);
 
   // Create the video item

@@ -1,3 +1,6 @@
+import getMealByName from "./getMeal.js";
+import createMealPopup from "./createMealPopup.js";
+
 const renderMeals = (data = []) => {
   const main = document.querySelector('main');
   const section = document.createElement('section');
@@ -6,7 +9,7 @@ const renderMeals = (data = []) => {
     `
       <article class="meal-card">
         <figure>
-          <img src="${data?.strMealThumb}/preview" alt="${data?.strMeal}" class="card-img" />
+          <img src="${data?.strMealThumb}" alt="${data?.strMeal}" class="card-img" />
         </figure>
         <div class="card-meta">
           <span class="title">${data?.strMeal}</span>
@@ -19,6 +22,18 @@ const renderMeals = (data = []) => {
   ));
 
   section.innerHTML = mapped.join(' ');
+
+  // Add event listener to every button with the class "btn-comments"
+  const btnComments = section.querySelectorAll('.btn-comments');
+  btnComments.forEach((btn, index) => {
+    btn.addEventListener('click', (event) => {
+      getMealByName(data[index].strMeal).then((meal) => {
+        createMealPopup(meal);
+      });
+      console.log('Button with class "btn-comments" clicked!');
+    });
+  });
+
   main.appendChild(section);
 };
 
