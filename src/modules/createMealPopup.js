@@ -1,5 +1,7 @@
 import getComments from './getComments.js';
 import displayComments from './displayComments.js';
+import createCommentForm from './createCommentForm.js';
+import submitComment from "./submitComment.js";
 
 /**
  * Create a meal popup with meal information.
@@ -65,12 +67,26 @@ const createMealPopup = async (meal) => {
 
   // Create the comments section
 
-  const appId = 'aCs2HQyrY5rfYgOrwEv8';
+  const appId = 'T2kz2KuAi806f4P5EDsm';
   // const itemId = meal.idMeal;
   const comments = await getComments(appId, '52771');
 
   const commentsSection = displayComments(comments);
   popup.appendChild(commentsSection);
+
+  // Create comment form
+
+  const commentForm = createCommentForm();
+  const submitButton = commentForm.querySelector('button');
+
+  submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    const nameInput = commentForm.querySelector('input');
+    const messageTextArea = commentForm.querySelector('textarea');
+    submitComment(appId, '52771', nameInput.value, messageTextArea.value);
+  });
+
+  popup.appendChild(commentForm);
 
   // Add the popup to the body
   popupwrapper.appendChild(popup);
