@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode production",
     "start": "webpack serve --open"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/DarkxDev/JavaScript-Capstone-Project#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",

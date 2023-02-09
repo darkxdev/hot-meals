@@ -50,7 +50,7 @@
   margin: 1rem auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 3%;
+  gap: 5%;
 }
 
 .meal-card {
