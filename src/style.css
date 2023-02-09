@@ -178,6 +178,10 @@
   padding: 10px 0;
 }
 
+#comments-section ul {
+  list-style: none;
+}
+
 .cc-license {
   margin: 0;
   padding: 1.5rem;

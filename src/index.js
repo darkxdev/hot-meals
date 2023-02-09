@@ -1,7 +1,3 @@
-/**
- * Import necessary modules.
- */
-
 import getMealByName, { getMealsByCategory } from './modules/getMeal.js';
 import createMealPopup from './modules/createMealPopup.js';
 import logo from './img/hot-meals.png';
