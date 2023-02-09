@@ -1,7 +1,7 @@
 import getComments from './getComments.js';
 import displayComments from './displayComments.js';
 import createCommentForm from './createCommentForm.js';
-import submitComment from "./submitComment.js";
+import submitComment from './submitComment.js';
 
 /**
  * Create a meal popup with meal information.

@@ -9,7 +9,9 @@ const submitComment = async (appId, itemId, username, comment) => {
     body: JSON.stringify(requestBody),
   });
 
-  const responseText = await response.text();
+  if (!response.ok) {
+    throw new Error(`Failed to submit comment, received ${response.status}`);
+  }
 };
 
 export default submitComment;

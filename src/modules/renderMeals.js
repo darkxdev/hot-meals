@@ -1,5 +1,5 @@
-import getMealByName from "./getMeal.js";
-import createMealPopup from "./createMealPopup.js";
+import getMealByName from './getMeal.js';
+import createMealPopup from './createMealPopup.js';
 
 const renderMeals = (data = []) => {
   const main = document.querySelector('main');
@@ -26,11 +26,10 @@ const renderMeals = (data = []) => {
   // Add event listener to every button with the class "btn-comments"
   const btnComments = section.querySelectorAll('.btn-comments');
   btnComments.forEach((btn, index) => {
-    btn.addEventListener('click', (event) => {
+    btn.addEventListener('click', () => {
       getMealByName(data[index].strMeal).then((meal) => {
         createMealPopup(meal);
       });
-      console.log('Button with class "btn-comments" clicked!');
     });
   });
 
