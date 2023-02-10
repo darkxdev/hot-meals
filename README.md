@@ -17,7 +17,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Leaderboard <a name="about-project"></a>
+# 📖 Hot Meals <a name="about-project"></a>
 
 'Hot Meals' is a project created at the Microverse program for portfolio showcase and learning purposes.
 
@@ -28,7 +28,7 @@
 <details>
   <summary>Languages</summary>
   <ul>
-    <li>HMTL</li>
+    <li>HTML</li>
     <li>CSS</li>
     <li>JavaScript</li>
   </ul>
@@ -127,6 +127,6 @@ We would like to thank Microverse for its guidance throughout this project.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
