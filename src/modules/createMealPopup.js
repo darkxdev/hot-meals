@@ -7,7 +7,7 @@ import submitComment from './submitComment.js';
  * Create a meal popup with meal information.
  */
 
-const createMealPopup = async (meal) => {
+const createMealPopup = async (meal, idMeal) => {
   // Create the popup container
   const popupwrapper = document.createElement('section');
   const popup = document.createElement('div');
@@ -68,10 +68,9 @@ const createMealPopup = async (meal) => {
   // Create the comments section
 
   const appId = 'T2kz2KuAi806f4P5EDsm';
-  // const itemId = meal.idMeal;
-  const comments = await getComments(appId, '52771');
-
+  const comments = await getComments(appId, idMeal);
   const commentsSection = displayComments(comments);
+
   popup.appendChild(commentsSection);
 
   // Create comment form
@@ -79,11 +78,20 @@ const createMealPopup = async (meal) => {
   const commentForm = createCommentForm();
   const submitButton = commentForm.querySelector('button');
 
-  submitButton.addEventListener('click', (event) => {
+  submitButton.addEventListener('click', async (event) => {
     event.preventDefault();
     const nameInput = commentForm.querySelector('input');
     const messageTextArea = commentForm.querySelector('textarea');
-    submitComment(appId, '52771', nameInput.value, messageTextArea.value);
+    submitComment(appId, idMeal, nameInput.value, messageTextArea.value);
+
+    setTimeout(async () => {
+      // Update the comments section after a new comment has been submitted
+      const updatedComments = await getComments(appId, idMeal);
+      commentsSection.innerHTML = '';
+      commentsSection.appendChild(displayComments(updatedComments));
+    }, 1000);
+
+    commentForm.reset();
   });
 
   popup.appendChild(commentForm);

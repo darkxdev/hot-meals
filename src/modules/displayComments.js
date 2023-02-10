@@ -1,8 +1,9 @@
+import commentsCounter from './commentsCounter.js';
+
 const displayComments = (comments) => {
   const commentsSection = document.createElement('div');
   commentsSection.id = 'comments-section';
   const header = document.createElement('h3');
-  header.textContent = 'Comments';
   commentsSection.appendChild(header);
 
   const list = document.createElement('ul');
@@ -12,7 +13,9 @@ const displayComments = (comments) => {
     list.appendChild(listItem);
   });
   commentsSection.appendChild(list);
-  // popup.appendChild(commentsSection);
+
+  const commentsNumber = commentsCounter(commentsSection);
+  header.textContent = `Comments (${commentsNumber})`;
 
   return commentsSection;
 };
