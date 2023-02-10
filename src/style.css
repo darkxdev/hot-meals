@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  padding: 0.5rem 10%;
+  align-items: center;
+}
+
+.logo {
+  max-width: 80px;
+  width: 80px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.nav-link a {
+  color: black;
+  text-decoration: none;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.nav-link a:hover {
+  color: #7f8cfe;
+}
+
+.nav-link a.active {
+  border-bottom: 1px solid #6274fd;
+  padding: 0.25rem 0.25rem 3px;
+  color: #6274fd;
+}
+
+.main-section {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.meal-card {
+  width: 30%;
+  border: 1px solid #adadad58;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.card-img {
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem auto;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.card-meta .title {
+  max-width: 70%;
+}
+
+.likes {
+  width: 25%;
+  color: #6274fd;
+  font-size: 0.8rem;
+}
+
+.card-meta .likes span {
+  margin: 0 0 0 0.2rem;
+}
+
+.btn {
+  padding: 0.5rem;
+  color: #6274fd;
+  border: 1px solid #6274fd;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: inherit;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #6274fd;
+}
+
+.btn:focus {
+  color: #fff;
+  background-color: #6274fd;
+}
+
+.btn-reservations {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn-comments {
+  width: 90%;
+  margin: 0.5rem 5%;
+}
+
+.pop-up-wrapper {
+  position: fixed;
+  padding: 2rem 0 0;
+  overflow-y: scroll;
+  inset: 0;
+  background-color: #000000a2;
+}
+
+.pop-up-wrapper::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+#meal-popup {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  background-color: #fff;
+  max-width: 600px;
+}
+
+#close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#meal-popup img {
+  max-width: 500px;
+}
+
+#meal-popup h2 {
+  margin: 15px 0;
+  text-align: center;
+}
+
+#meal-popup h3 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+#info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#info-container li {
+  list-style: none;
+  width: 45%;
+  padding: 10px 0;
+}
+
+#comments-section ul {
+  list-style: none;
+}
+
+#meal-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+#meal-popup form input {
+  padding: 5px;
+}
+
+#meal-popup form textarea {
+  margin: 2vw 0;
+  width: 100%;
+  padding: 5px;
+}
+
+#meal-popup form button {
+  width: 100px;
+}
+
+.cc-license {
+  margin: 0;
+  padding: 1.5rem;
+  font-size: 1rem;
+  border: solid 1px #000;
+}
