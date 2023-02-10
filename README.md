@@ -6,6 +6,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [🚀 Demonstration](#presentation)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -45,14 +47,16 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- PROJECT PRESENTATION -->
+## Presentation <a name="presentation"></a>
 
 Watch a quick introduction to our project [here.](https://drive.google.com/file/d/1QZYJ3fm1aO-mKH7LF7HIpJ93hhyQKSw7/view?usp=share_link)
 
 <!-- LIVE DEMO -->
+## 🚀 Live Demo <a name="live-demo"></a>
 
 You can checkout the live running version of this app at the following link:
 
-[https://darkxdev.github.io/JavaScript-Capstone-Project/dist](https://darkxdev.github.io/JavaScript-Capstone-Project/dist)
+[https://darkxdev.github.io/JavaScript-Capstone-Project/dist/.](https://darkxdev.github.io/JavaScript-Capstone-Project/dist)
 
 <!-- GETTING STARTED -->
 
