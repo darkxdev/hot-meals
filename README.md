@@ -44,6 +44,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- PROJECT PRESENTATION -->
+
+Watch a quick introduction to our project [here.](https://drive.google.com/file/d/1QZYJ3fm1aO-mKH7LF7HIpJ93hhyQKSw7/view?usp=share_link)
+
 <!-- LIVE DEMO -->
 
 You can checkout the live running version of this app at the following link:
